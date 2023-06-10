@@ -38,7 +38,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "https://brainy-pear-viper.cyclic.app",
+      callbackURL: "https://brainy-pear-viper.cyclic.app/auth/google/admin",
     },
     function (accessToken, refreshToken, email, cb) {
       User.findOrCreate({ googleId: email.id }, function (error, user) {
