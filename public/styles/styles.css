@@ -755,7 +755,7 @@ teacher-col {
 .sub-header_2 {
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(87, 22, 22, 0.949), rgba(30, 4, 4, 0.868)), url(../images/Screen Shot 2023-03-07 at 12.55.36 AM.png);
+    background-image: linear-gradient(rgba(87, 22, 22, 0.949), rgba(30, 4, 4, 0.868)), url(../images/Screen\ Shot\ 2023-03-07\ at\ 12.55.36\ AM.png);
     background-position: center;
     background-size: cover;
     text-align: center;
