@@ -33,15 +33,18 @@ passport.deserializeUser(function (user, cb) {
         return cb(null, user);
     });
 });
-passport.use(new GoogleStrategy({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: 'https://ruby-frail-giraffe.cyclic.app'
-},
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      callbackURL: "https://brainy-pear-viper.cyclic.app",
+    },
     function (accessToken, refreshToken, email, cb) {
-        User.findOrCreate({ googleId: email.id }, function (error, user) {
-            return cb(error, user);
-        });
+      User.findOrCreate({ googleId: email.id }, function (error, user) {
+        return cb(error, user);
+      });
     }
-));
+  )
+);
 module.exports = User;
