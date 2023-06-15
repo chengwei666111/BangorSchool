@@ -16,8 +16,8 @@
                 <h2><%= course.courseName %></h2>
                 <a href="./<%= course._id %>/edit-course" class="call-to-action-btn red-btn">Edit</a>
 
-                <form action="/courses/<%= course._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                    <button class="call-to-action-btn red-btn" type="submit">Delete</button>
+                <form id="deleteCoursesForm" action="/courses/<%= course._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                    <button class="call-to-action-btn red-btn" type="submit" onclick="return confirmDelete()">Delete</button>
                 </form>
             </div>
             </div>

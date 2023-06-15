@@ -17,8 +17,8 @@
             <h2><%= service.serviceName %></h2>
             <a href="./<%= service._id %>/edit-service" class="call-to-action-btn red-btn">Edit</a>
 
-            <form action="/services/<%= service._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                <button class="call-to-action-btn red-btn" type="submit">Delete</button>
+            <form id="deleteServicesForm" action="/services/<%= service._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                <button class="call-to-action-btn red-btn" type="submit" onclick="return confirmDelete()">Delete</button>
             </form>
         </div>
         </div>
