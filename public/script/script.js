@@ -45,3 +45,18 @@ function confirmEditService() {
     return false;
   }
 }
+
+function confirmCreateElement() {
+  const formElementCreateCourse = document.getElementById("createCoursesForm");
+  const formElementCreateService =
+    document.getElementById("createServicesForm");
+  const userResponseCreateCourse = confirm(
+    'Click "OK" if you want to create the item. Click "Cancel" to cancel it.'
+  );
+  if (userResponseCreateCourse === true) {
+    formElementCreateCourse.submit();
+    formElementCreateService.submit();
+  } else {
+    return false;
+  }
+}
