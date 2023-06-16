@@ -14,7 +14,7 @@
             </div>
 
             <div class="contact-us-col">
-                <form action="/services/<%= foundService._id %>?_method=PUT" method="POST">
+                <form id="editServicesForm" action="/services/<%= foundService._id %>?_method=PUT" method="POST">
                 <div>
                     <label for="serviceName">serviceName: </label>
                     <input type="text" name="serviceName" id="serviceName" minlength="1" value="<%= foundService.serviceName %>" required />
@@ -26,7 +26,7 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="call-to-action-btn red-btn">Submit</button>
+                    <button onclick="return confirmEditService()" type="submit" class="call-to-action-btn red-btn">Submit</button>
                 </div>
                 <a href="/admin/admin-services" class="call-to-action-btn red-btn">Back to Admin - Services</a>
 

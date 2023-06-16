@@ -13,10 +13,34 @@ function confirmDelete() {
   const formElement = document.getElementById("deleteCoursesForm");
   const formElementServices = document.getElementById("deleteServicesForm");
   // console.log(formElement);
-  const userResponse = confirm("Are you sure?");
+  const userResponse = confirm('Click "OK" if you want to delete the item. Click "Cancel" if you want to keep it.');
   if (userResponse === true) {
     formElement.submit();
     formElementServices.submit();
+  } else {
+    return false;
+  }
+}
+
+function confirmEditCourse() {
+  const formElementEditCourse = document.getElementById("editCoursesForm");
+  const userResponseEditCourses = confirm(
+    'Click "OK" if you want to edit the item. Click "Cancel" if you want to keep it.'
+  );
+  if (userResponseEditCourses === true) {
+    formElementEditCourse.submit();
+  } else {
+    return false;
+  }
+}
+
+function confirmEditService() {
+  const formElementEditService = document.getElementById("editServicesForm");
+  const userResponseEditServices = confirm(
+    'Click "OK" if you want to edit the item. Click "Cancel" if you want to keep it.'
+  );
+  if (userResponseEditServices === true) {
+    formElementEditService.submit();
   } else {
     return false;
   }

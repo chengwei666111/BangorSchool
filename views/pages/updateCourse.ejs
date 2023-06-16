@@ -14,7 +14,7 @@
             </div>
 
             <div class="contact-us-col">
-                <form action="/courses/<%= foundCourse._id %>?_method=PUT" method="POST">
+                <form id="editCoursesForm" action="/courses/<%= foundCourse._id %>?_method=PUT" method="POST">
                 <div>
                     <label for="courseName">CourseName: </label>
                     <input type="text" name="courseName" id="courseName" minlength="1" value="<%= foundCourse.courseName %>" required />
@@ -41,7 +41,7 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="call-to-action-btn red-btn">Submit</button>
+                    <button onclick="return confirmEditCourse()" type="submit" type="submit" class="call-to-action-btn red-btn">Submit</button>
                 </div>
                 <a href="/admin/admin-courses" class="call-to-action-btn red-btn">Back to Admin - Courses</a>
 
